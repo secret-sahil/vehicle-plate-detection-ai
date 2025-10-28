@@ -120,9 +120,10 @@ HTML_TEMPLATE = """
                     const resultsContainer = document.getElementById('results-container');
                     resultsContainer.innerHTML = ''; // Clear old results
                     data.plates.forEach(plate => {
+                        console.log(plate);
                         const item = document.createElement('div');
                         item.className = 'result-item';
-                        item.textContent = `[${plate.timestamp}] - ${plate.text}`;
+                        item.textContent = `[${plate.timestamp}] - ${plate.plate_text}`;
                         resultsContainer.appendChild(item);
                     });
                     // Auto-scroll to the bottom

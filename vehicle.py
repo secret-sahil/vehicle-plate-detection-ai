@@ -139,10 +139,10 @@ class Vehicle:
         plate_filepath = os.path.join(save_path, plate_filename)
         vehicle_filepath = os.path.join(save_path, vehicle_filename)
         
-        if self.best_vehicle_img is not None:
-            cv2.imwrite(vehicle_filepath, self.best_vehicle_img)
-        if self.best_plate_img is not None:
-            cv2.imwrite(plate_filepath, self.best_plate_img)
+        # if self.best_vehicle_img is not None:
+        #     cv2.imwrite(vehicle_filepath, self.best_vehicle_img)
+        # if self.best_plate_img is not None:
+        #     cv2.imwrite(plate_filepath, self.best_plate_img)
 
         # Append results to a single CSV file for the hour
         csv_path = os.path.join(save_path, "results.csv")
@@ -150,8 +150,8 @@ class Vehicle:
         csv_row = {
             "vehicle_id": self.track_id,
             "timestamp": final_data['timestamp'],
-            "vehicle_image_path": vehicle_filepath,
-            "plate_image_path": plate_filepath,
+            # "vehicle_image_path": vehicle_filepath,
+            # "plate_image_path": plate_filepath,
             "OCR_text": ocr_text
         }
 
